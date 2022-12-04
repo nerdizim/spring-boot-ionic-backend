@@ -43,6 +43,8 @@ public class CursomcApplication implements CommandLineRunner{
 		SpringApplication.run(CursomcApplication.class, args);
 	}
 
+	
+	//Faz parte do CommandLineRunner
 	@Override
 	public void run(String... args) throws Exception {
 		
@@ -64,6 +66,7 @@ public class CursomcApplication implements CommandLineRunner{
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
 		produtoRepository.saveAll(Arrays.asList(p1,p2,p3));
 		
+		//----------------------/\------------------------\\		
 		
 		Estado est1 = new Estado(null,"Minas Gerais");
 		Estado est2 = new Estado(null, "São Paulo");
@@ -77,6 +80,8 @@ public class CursomcApplication implements CommandLineRunner{
 		
 		estadoRepository.saveAll(Arrays.asList(est1, est2));
 		cidadeRepository.saveAll(Arrays.asList(c1, c2, c3));
+		
+		//----------------------/\------------------------\\
 		
 		Cliente cli1 = new Cliente(null, "Tutu","tutu@gmail.com","36379875625",TipoCliente.PESSOAFISICA);
 		cli1.getTelefones().addAll(Arrays.asList("246797956","987456213"));
